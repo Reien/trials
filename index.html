@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset = "UTF-8"/>
+	<title>Project: Immortality</title>
+
+	<script src = "js/phaser.min.js"></script>
+	<script src = "Boot.js"></script>
+	<script src = "Preloader.js"></script>
+	<script src = "Menu.js"></script>
+	<script src = "Quit.js"></script>
+	<script src = "Level1.js"></script>
+	<script src = "Level2.js"></script>
+	<script src = "Level2.js"></script>
+
+	<body>
+		<script type = "text/javascript">
+			window.onload = function() {
+				var game = new Phaser.Game(640, 950, Phaser.Canvas, '');
+				game.state.add('Boot', Project.Boot);
+				game.state.add('Preloader', Project.Preloader);
+				game.state.add('Menu', Project.Menu);
+				game.state.add('Quit', Project.Quit);
+				game.state.add('Level1', Project.Level1);
+				game.state.add('Level2', Project.Level2);
+				game.state.add('Level2', Project.Level2);
+
+				game.state.start('Boot');
+			};
+		</script>
+	</body>
+</html>
